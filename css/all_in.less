@@ -1,0 +1,374 @@
+@bigfont: 1.3em;
+@basefont: 1.2em;
+@smallfont: 0.9em;
+@sans-serif: Tahoma, Geneva, sans-serif; 
+@serif: "Times New Roman", Times, serif; 
+
+// any-page elements
+.button
+{
+	font-size: @basefont;
+	margin: 0.9em;
+	padding: 0.9em;
+	border: 2px solid #ddd;
+	color: #666;
+	background-color: #f0f0f0;
+	width: 10em;
+	&:hover
+	{
+		cursor: pointer;
+		background-color: #dfdfdf;
+		border-color: #ccc;
+	}
+}
+
+.heading
+{
+	width: 23em;
+	display: inline-block;
+	.heading__text
+	{
+		border-top: 2px solid #3399cc;
+  		border-bottom: 2px solid #3399cc;
+		font-family: @sans-serif;
+		font-size: @basefont;
+		color: #3399cc;
+		background-color: white;
+		padding: 1em;
+	}
+}
+
+.menu
+{
+	position: fixed;
+	right: 1em;
+	padding: 1em;
+	margin: 1em;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-top: 3px solid #36c;
+	.menu__element
+	{
+		
+		.menu__link
+		{
+			font-size: @basefont;
+			text-decoration: none;
+			color: #999;
+			font-family: @sans-serif;
+			&:hover
+			{
+				text-decoration: underline;
+				color: #36c;
+			}
+		}
+	}
+}
+
+.umessage
+{
+	width: 20em;
+	display: inline-block;
+	padding: 0.3em;
+	margin: 0.3em;
+	font-size: @basefont;
+	font-family: @sans-serif;
+	/*border-left: 5px solid #cc3333;*/
+	color: #333333;
+}
+
+html
+{
+	height: 100%;
+}
+
+body
+{
+	margin: 0px;
+	height: 100%;
+	text-align: center;
+}
+// any-page END
+
+// login page
+.login-form
+{
+
+	.login-form__input
+	{
+		color: gray;
+		margin: 1em;
+		padding: 1em;
+		font-size: @bigfont;
+		border: 1px solid #cccccc;
+	}
+	.login-form__button
+	{
+		.button;
+	}
+}
+// login END
+
+// buglist page 
+.table-bugs
+{
+	width: 80%;
+	display: inline-block;
+	border-collapse: collapse;
+
+	.table-bugs__cell-head
+	{
+		background-color: white;
+		height: 2em;
+		.table-bugs__head
+		{
+			color: #333333;
+			text-decoration: none;
+			font-family: @sans-serif;
+			font-size: @smallfont;
+			&:hover
+			{
+				border-top: 1px solid blue;
+				padding-top: 1em;			
+			}
+		}
+	}
+
+	.table-bugs__cell
+	{
+		font-size: @smallfont;
+		font-family: @sans-serif;
+		min-width: 8em; 
+		max-width: 8em;
+		height: 2.5em;
+		border: 1px solid #ddd;
+		padding-left: 0.2em;
+		padding-right: 0.2em;
+		color: #777;
+	}
+
+	.table-bugs__cell-description
+	{
+		max-width: 13em;
+		min-width: 13em;
+		text-align: left;
+		background-color: #fff;
+		border-right: 1px solid #3366cc;
+		border-bottom: none;
+		border-top: none;
+		border-left: none;
+		.table-bugs__description
+		{
+			font-family: @serif;
+			text-decoration: none;
+			font-size: @bigfont;
+			color: #3333cc;
+			&:hover
+			{
+				text-decoration: underline #66f;
+				color: #66f;
+			}
+		}
+	}
+
+	.table-bugs__cell-date
+	{
+		max-width: 13em;
+		min-width: 13em;
+	}
+}
+
+.pages
+{
+	font-family: @sans-serif;
+	font-size: @basefont;
+	color: #3366ff;
+	padding: 0.3em;
+	background-color: #cccccc;
+	display: inline-block;
+	width: 5em;
+	border-radius: 1em;
+}
+
+.page
+{
+	font-family: @sans-serif;
+	font-size: @basefont;
+	text-decoration: none;
+	color: #3366cc;
+	padding: 0.5em;
+	background-color: #fff;
+	&:hover
+	{
+		border-top: 1px solid blue;
+		border-bottom: 1px solid blue;
+	}
+}
+// buglist END
+
+// bug page 
+.edit-button
+{
+	text-decoration: underline;
+	color: gray;
+	font-size: @smallfont;
+	&:hover
+	{
+		color: blue;		
+	}
+}
+
+.bug-form
+{
+	width: 50em;
+	display: inline-block;
+	.bug-form__short-description
+	{
+		display: inline-block;
+		font-size: @smallfont;
+		padding: 1em;
+		width: 20em;
+		color: #666;
+		border-top: none;
+		border-right: none;
+		border-left: none;
+		border-bottom: 1px solid #999; 
+	}
+
+	.bug-form__full-description
+	{
+		display: inline-block;
+		font-size: @bigfont;
+		margin: 0.3em;
+		padding: 1em;
+		width: 40em;
+		height: 10em;
+		resize: none;
+		color: #333;
+		border: 3px solid #999;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+
+	.bug-form__select
+	{
+		display: inline-block;
+		font-size: @bigfont;
+		color: #333;
+		border: 1px dashed #39c;
+	}
+
+	.bug-form__comment
+	{
+		display: inline-block;
+		width: 30em;
+		height: 5em;
+		resize: none;
+		font-size: @basefont;
+		margin: 0.3em;
+		transform: scale(0);
+		transition: all 0.3s;
+		border: 1px solid blue;
+	}
+	.bug-form__button
+	{
+		.button;
+	}
+}
+
+.bug-records
+{
+	display: inline-block;
+	font-size: @basefont;
+	width: 40em;
+	.bug-records__status
+	{
+		display: inline-block;
+		font-family: @sans-serif;
+		font-size: @basefont;
+		padding: 0.3em;
+		color: #333;
+	}
+
+	.bug-records__date
+	{
+		font-family: @sans-serif;
+		font-size: @smallfont;
+		padding: 0.3em;
+	}
+
+	.bug-records__name
+	{
+		font-size: @smallfont;
+		font-family: @sans-serif;
+		padding: 0.5em;
+		color: #f66;
+	}
+
+	.bug-records__comment
+	{
+		display: inline-block;
+		font-family: @sans-serif;
+		font-size: @smallfont;
+		padding: 0.5em;
+		background-color: #ddd
+	}
+}
+// bug END
+
+// new user page 
+.user-form
+{
+	text-align: center;
+	display: inline-block;
+	width: 29em;
+	.user-form__login
+	{
+		display: block;
+		font-size: @basefont;
+		margin: 0.9em;
+		padding: 0.9em;
+		border: 2px solid #ddd;
+		color: #666;
+		width: 20em;
+	}
+
+	.user-form__password
+	{
+		.user-form > .user-form__login;
+	}
+
+	.user-form__firstname
+	{
+		.user-form > .user-form__login;
+	}
+
+	.user-form__lastname
+	{
+		.user-form > .user-form__login;
+	}
+}
+// new user END
+
+// user list page 
+.table-users
+{
+	width: 30em;
+	.table-users__cell-head
+	{
+		.table-bugs > .table-bugs__cell-head;
+	}
+
+	.table-users__cell-description
+	{
+		.table-bugs > .table-bugs__cell-description;
+		.table-users__description
+		{
+			.table-bugs > .table-bugs__cell-description > .table-bugs__description;
+		}
+	}
+
+	.table-users__cell
+	{
+		.table-bugs > .table-bugs__cell;
+	}
+}
+// user list END
